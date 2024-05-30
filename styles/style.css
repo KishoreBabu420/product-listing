@@ -16,6 +16,9 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {
@@ -29,4 +32,105 @@ li {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Project css */
+.header {
+  width: 100%;
+  padding: 0.6rem;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.search-bar {
+  width: 56%;
+  padding: 0.6rem 1rem;
+  margin-top: 0.8rem;
+}
+
+.filters {
+  width: 15%;
+  padding: 0.8rem 1rem;
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 5rem;
+  left: 0.7rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.filters h2 {
+  margin-top: 0;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+#price-range-display {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.main {
+  width: 70%;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  margin: 0.75rem;
+  width: 18rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.product-item img {
+  width: 100%;
+  height: 10rem; /* Fixed height */
+  -o-object-fit: contain;
+  object-fit: contain;
+  border-radius: 8px 8px 0 0;
+}
+
+.btn-load-more {
+  margin: 1.5rem;
+  padding: 0.8rem 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .filters {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  main {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+    display: none;
+  }
+
+  main {
+    width: 90%;
+  }
 }

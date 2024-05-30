@@ -49,9 +49,12 @@ const renderProducts = () => {
     productItem.classList.add('product-item');
     productItem.innerHTML = `
                 <img src="${product.image}" alt="${product.title}">
-                <h3>${product.title}</h3>
+                <h3>${product.title.split(' ').slice(0, 3).join(' ')}</h3>
                 <p>$${product.price}</p>
-                <p>${product.description}</p>
+                <p>${product.description
+                  .split(' ')
+                  .slice(0, 8)
+                  .join(' ')}...</p>
             `;
     productListContainer.appendChild(productItem);
   });

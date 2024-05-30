@@ -24,39 +24,56 @@
     />
   </head>
   <body>
-    <header>
+    <header class="header">
       <h1>Product Listing</h1>
       <input
         type="text"
         id="search-bar"
+        class="search-bar"
         placeholder="Search for products..."
       />
     </header>
 
-    <aside>
+    <section
+      id="filters"
+      class="filters"
+    >
       <h2>Filters</h2>
-      <label for="category-filter">Category</label>
-      <select id="category-filter">
-        <option value="">All</option>
-        <!-- Categories will be populated dynamically -->
-      </select>
+      <div class="filter-group">
+        <label for="category-filter">Category</label>
+        <select
+          id="category-filter"
+          aria-label="Filter by category"
+        >
+          <option value="">All</option>
+          <!-- Categories will be populated dynamically -->
+        </select>
+      </div>
 
-      <label for="price-filter">Price Range</label>
-      <input
-        type="range"
-        id="price-filter"
-        min="0"
-        max="1000"
-        step="10"
-      />
-    </aside>
+      <div class="filter-group">
+        <label for="price-filter">Price Range</label>
+        <input
+          type="range"
+          id="price-filter"
+          min="0"
+          max="1000"
+          step="10"
+          aria-label="Filter by price range"
+        />
+        <span id="price-range-display"></span>
+      </div>
+    </section>
 
-    <main id="product-listing">
+    <main
+      id="product-listing"
+      class="main"
+    >
       <!-- Product items will be appended here -->
     </main>
 
     <button
       id="load-more"
+      class="btn-load-more"
       style="display: none"
     >
       Load More
