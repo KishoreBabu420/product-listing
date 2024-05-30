@@ -24,6 +24,51 @@
     />
   </head>
   <body>
+    <header>
+      <h1>Product Listing</h1>
+      <input
+        type="text"
+        id="search-bar"
+        placeholder="Search for products..."
+      />
+    </header>
+
+    <aside>
+      <h2>Filters</h2>
+      <label for="category-filter">Category</label>
+      <select id="category-filter">
+        <option value="">All</option>
+        <!-- Categories will be populated dynamically -->
+      </select>
+
+      <label for="price-filter">Price Range</label>
+      <input
+        type="range"
+        id="price-filter"
+        min="0"
+        max="1000"
+        step="10"
+      />
+
+      <label>
+        <input
+          type="checkbox"
+          id="availability-filter"
+        />
+        In Stock Only
+      </label>
+    </aside>
+
+    <main id="product-listing">
+      <!-- Product items will be appended here -->
+    </main>
+
+    <button
+      id="load-more"
+      style="display: none"
+    >
+      Load More
+    </button>
     <!-- custom script -->
     <script src="./scripts/script.js"></script>
   </body>
